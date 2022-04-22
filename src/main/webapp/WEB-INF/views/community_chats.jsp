@@ -100,8 +100,10 @@
                                 <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                     he earth it first without heaven in place seed it second morning saying.</p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
+                                    <li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
+                                    <li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
                                 </ul>
                             </div>
                         </article>
@@ -115,7 +117,9 @@
                                     he earth it first without heaven in place seed it second morning saying.</p>
                                 <ul class="blog-info-link">
                                     <li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
+                                    <li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
+                                    <li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
                                 </ul>
                             </div>
                         </article>

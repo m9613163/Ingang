@@ -82,11 +82,15 @@
                             </div>
                         </article>
                         <hr>
-                        <div>
-                        	<font size="1px"> <a>·&nbsp;최신순</a>   &nbsp;<a>·&nbsp;좋아요순</a></font>
-                        	<button>as</button>
-                        	
+                        <div class="row">
+	                        <div  class="col-sm-10">
+	                        	<font size="1px"> <a>·&nbsp;최신순</a>   &nbsp;<a>·&nbsp;좋아요순</a></font>
+	                        </div>                        
+	                        <div  class="col-sm-2">
+	                        	<button type="button" class="btn btn-outline-danger">글쓰기</button>
+	                        </div>
                         </div>
+
                         <article class="blog_item">
 
                             <div class="blog_details">

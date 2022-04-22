@@ -7,22 +7,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-     <title> 커뮤니티 </title>
+    	<title> 커뮤니티 </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="<c:url value='/resources/img/favicon.ico'/>">
     
-      <!-- CSS here -->
-        <link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.min.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/owl.carousel.min.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/flaticon.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/price_rangs.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/slicknav.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/animate.min.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/magnific-popup.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/fontawesome-all.min.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/themify-icons.css'/>">
-        <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>">
+    <!-- CSS here -->
+	<link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.min.css'/>">
+	<link rel="stylesheet" href="<c:url value='/resources/css/animate.min.css'/>">
+	<link rel="stylesheet" href="<c:url value='/resources/css/fontawesome-all.min.css'/>">
+	<link rel="stylesheet" href="<c:url value='/resources/css/themify-icons.css'/>">
+	<link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>">
 </head>
 
 <body>
@@ -74,29 +69,24 @@
                                   <form action="#">
                                     <div class="row">
                                          <div class="col-lg-9">
-                                              <input type="text" class="form-control" placeholder='Search Keyword' onblur="this.placeholder = 'Search Keyword'">
+                                             <input type="text" class="form-control" placeholder='Search Keyword' onblur="this.placeholder = 'Search Keyword'">
                                              <input type="text" class="form-control" placeholder='Search Keyword'>
                                          </div>
                                          <div class="col-lg-3">
                                               <input type="button" class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" value="검색">
                                          </div>
-                                         
-                                         
                                       </div>
-                                      <div class="row">
-                                      <div class="col-lg-9">
-                                      <br>
-                                        최신순
-                                      </div>
-                                      <hr>
-                                      </div>
-                       <hr>
                                   </form>
                               </aside>
                             
                             </div>
                         </article>
-                    
+                        <hr>
+                        <div>
+                        	<font size="1px"> <a>·&nbsp;최신순</a>   &nbsp;<a>·&nbsp;좋아요순</a></font>
+                        	<button>as</button>
+                        	
+                        </div>
                         <article class="blog_item">
 
                             <div class="blog_details">
@@ -120,7 +110,7 @@
                                 <p>That dominion stars lights dominion divide years for fourth have don't stars is that
                                     he earth it first without heaven in place seed it second morning saying.</p>
                                 <ul class="blog-info-link">
-                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
                                     <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                 </ul>
                             </div>
@@ -182,48 +172,18 @@
                         </aside>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
-    <!--================Blog Area =================-->
     
-       <%------------ footer section  ------------%>
-        <jsp:include page="./fix/footer.jsp" />
-        
-          <%------------ All JS Custom Plugins Link Here here -----------%>
-        <script src="<c:url value='/resources/js/vendor/modernizr-3.5.0.min.js'/>"></script>
-      <%-- Jquery, Popper, Bootstrap --%>
-      <script src="<c:url value='/resources/js/vendor/jquery-1.12.4.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/popper.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/bootstrap.min.js'/>"></script>
-       <%-- Jquery Mobile Menu --%>
-        <script src="<c:url value='/resources/js/jquery.slicknav.min.js'/>"></script>
+    <%------------ footer section  ------------%>
+    <jsp:include page="./fix/footer.jsp" />
+    <%-- Jquery, Popper, Bootstrap --%>
+   	<script src="<c:url value='/resources/js/vendor/jquery-1.12.4.min.js'/>"></script>
+	<script src="<c:url value='/resources/js/bootstrap.min.js'/>"></script>
 
-      <%-- Jquery Slick , Owl-Carousel Plugins --%>
-        <script src="<c:url value='/resources/js/owl.carousel.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/slick.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/price_rangs.js'/>"></script>
-        
-      <%-- One Page, Animated-HeadLin --%>
-        <script src="<c:url value='/resources/js/wow.min.js'/>"></script>
-      <script src="<c:url value='/resources/js/animated.headline.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.magnific-popup.js'/>"></script>
-
-      <%-- Scrollup, nice-select, sticky --%>
-        <script src="<c:url value='/resources/js/jquery.scrollUp.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.nice-select.min.js'/>"></script>
-      <script src="<c:url value='/resources/js/jquery.sticky.js'/>"></script>
-        
-        <%-- contact js --%>
-        <script src="<c:url value='/resources/js/contact.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.form.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.validate.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/mail-script.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.ajaxchimp.min.js'/>"></script>
-        
-      <%-- Jquery Plugins, main Jquery --%>
-        <script src="<c:url value='/resources/js/plugins.js'/>"></script>
-        <script src="<c:url value='/resources/js/main.js'/>"></script>
+    <%-- Jquery Plugins, main Jquery --%>
+	<script src="<c:url value='/resources/js/plugins.js'/>"></script>
+    <script src="<c:url value='/resources/js/main.js'/>"></script>
 </body>
 </html>

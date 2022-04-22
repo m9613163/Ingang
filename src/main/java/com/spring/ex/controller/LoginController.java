@@ -13,7 +13,13 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value="/signUp", method = RequestMethod.GET)
-	public String signUp() {
+	public String getSignUp() {
 		return "/login/signUp";
 	}	
+	
+	@RequestMapping(value="/signUp", method = RequestMethod.POST)
+	public String postSignUp() {
+		return "/login/signUp";
+	}	
+	
 }

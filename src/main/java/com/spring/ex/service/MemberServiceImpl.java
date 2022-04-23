@@ -4,8 +4,8 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
+import com.spring.ex.dao.MemberDAO;
 import com.spring.ex.dto.MemberDTO;
-import com.srping.ex.dao.MemberDAO;
 
 @Service
 public class MemberServiceImpl implements MemberService {

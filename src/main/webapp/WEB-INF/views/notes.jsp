@@ -7,24 +7,121 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-         <title> 노트 조회 </title>
+         <title> 노트 검색 </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="<c:url value='/resources/img/favicon.ico'/>">
 
 		<!-- CSS here -->
-        <link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.min.css'/>">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <%-- <link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.min.css'/>"> --%>
         <link rel="stylesheet" href="<c:url value='/resources/css/owl.carousel.min.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/flaticon.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/price_rangs.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/slicknav.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/animate.min.css'/>">
+        <link rel="stylesheet" href="<c:url value='/resources/css/price_rangs.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/magnific-popup.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/fontawesome-all.min.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/themify-icons.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/slick.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/nice-select.css'/>">
         <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>">
+        <link rel="stylesheet" href="<c:url value='/resources/css/responsive.css'/>">
+        <%-- <link rel="stylesheet" href="<c:url value='/resources/css/sidebars.css'/>"> --%>
+
+        <style>
+            .btn:hover::before {
+                /* transform: translate(-50%,-50%); */
+            }
+
+            .btn-toggle::before {
+                /* position:absolute;
+                top:50%;
+                left:10%;
+                background: none;
+                transform:translate(-50%,-50%);
+                width: 1.25em;
+                height: auto;
+                line-height: 0;
+                content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+                transition: transform .35s ease;
+                transform-origin: 50% 50%; */
+            }
+
+            .btn-toggle[aria-expanded="true"] {
+                color: rgba(0, 0, 0, .85);
+            }
+
+            .btn-toggle[aria-expanded="true"]::before {
+                /* transform: rotate(45deg); */
+            }
+
+            .link-dark {
+                color: #212529;
+            }
+
+            .btn-toggle-nav a {
+                display: inline-flex;
+                padding: 0.1875rem 0.5rem;
+                margin-top: 0.125rem;
+                margin-left: 1.25rem;
+                text-decoration: none;
+            }
+
+            a {
+                color: #635c5c;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color:black;
+            }
+
+            .d-flex {
+                font-weight: bolder;
+            }
+
+            form.search-box .input-form::before {
+                content: unset;
+            }
+
+            .item:nth-child(1) { flex-grow: 12; }
+			.item:nth-child(2) { flex-grow: 1; }
+
+            .stars-outer {
+                position: relative;
+                display: inline-block;
+            }
+
+            .stars-inner {
+                position: absolute;
+                top: 0;
+                left: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 0;
+            }
+
+            .stars-outer::before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: #ccc;
+            }
+
+            .stars-inner::before {
+                content: "\f005 \f005 \f005 \f005 \f005";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: #f8ce0b;
+            }
+
+            form.search-box .search-form {
+                width: auto;
+            }
+        </style>
    </head>
 
    <body>
@@ -34,433 +131,249 @@
 	    <%------------ header section  ------------%>
 	    <jsp:include page="./fix/header.jsp" />
     
-    <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider section-overly slider-height2 d-flex align-items-center" data-background="assets/img/hero/about.jpg">
+        <!-- 메인 -->
+        <main>
+            <%-- 본문의 상단 --%>
+            <div class="job-listing-area pt-120 pb-120">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>Get your job</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End -->
-        <!-- Job List Area Start -->
-        <div class="job-listing-area pt-120 pb-120">
-            <div class="container">
-                <div class="row">
-                    <!-- Left content -->
-                    <div class="col-xl-3 col-lg-3 col-md-4">
-                        <div class="row">
-                            <div class="col-12">
-                                    <div class="small-section-tittle2 mb-45">
-                                    <div class="ion"> <svg 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        width="20px" height="12px">
-                                    <path fill-rule="evenodd"  fill="rgb(27, 207, 107)"
-                                        d="M7.778,12.000 L12.222,12.000 L12.222,10.000 L7.778,10.000 L7.778,12.000 ZM-0.000,-0.000 L-0.000,2.000 L20.000,2.000 L20.000,-0.000 L-0.000,-0.000 ZM3.333,7.000 L16.667,7.000 L16.667,5.000 L3.333,5.000 L3.333,7.000 Z"/>
-                                    </svg>
-                                    </div>
-                                    <h4>Filter Jobs</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Job Category Listing start -->
-                        <div class="job-category-listing mb-50">
-                            <!-- single one -->
-                            <div class="single-listing">
-                               <div class="small-section-tittle2">
-                                     <h4>Job Category</h4>
-                               </div>
-                                <!-- Select job items start -->
-                                <div class="select-job-items2">
-                                    <select name="select">
-                                        <option value="">All Category</option>
-                                        <option value="">Category 1</option>
-                                        <option value="">Category 2</option>
-                                        <option value="">Category 3</option>
-                                        <option value="">Category 4</option>
-                                    </select>
-                                </div>
-                                <!--  Select job items End-->
-                                <!-- select-Categories start -->
-                                <div class="select-Categories pt-80 pb-50">
-                                    <div class="small-section-tittle2">
-                                        <h4>Job Type</h4>
-                                    </div>
-                                    <label class="container">Full Time
-                                        <input type="checkbox" >
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Part Time
-                                        <input type="checkbox" checked="checked active">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Remote
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Freelance
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <!-- select-Categories End -->
-                            </div>
-                            <!-- single two -->
-                            <div class="single-listing">
-                               <div class="small-section-tittle2">
-                                     <h4>Job Location</h4>
-                               </div>
-                                <!-- Select job items start -->
-                                <div class="select-job-items2">
-                                    <select name="select">
-                                        <option value="">Anywhere</option>
-                                        <option value="">Category 1</option>
-                                        <option value="">Category 2</option>
-                                        <option value="">Category 3</option>
-                                        <option value="">Category 4</option>
-                                    </select>
-                                </div>
-                                <!--  Select job items End-->
-                                <!-- select-Categories start -->
-                                <div class="select-Categories pt-80 pb-50">
-                                    <div class="small-section-tittle2">
-                                        <h4>Experience</h4>
-                                    </div>
-                                    <label class="container">1-2 Years
-                                        <input type="checkbox" >
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">2-3 Years
-                                        <input type="checkbox" checked="checked active">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">3-6 Years
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">6-more..
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <!-- select-Categories End -->
-                            </div>
-                            <!-- single three -->
-                            <div class="single-listing">
-                                <!-- select-Categories start -->
-                                <div class="select-Categories pb-50">
-                                    <div class="small-section-tittle2">
-                                        <h4>Posted Within</h4>
-                                    </div>
-                                    <label class="container">Any
-                                        <input type="checkbox" >
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Today
-                                        <input type="checkbox" checked="checked active">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 2 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 3 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 5 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="container">Last 10 days
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <!-- select-Categories End -->
-                            </div>
-                            <div class="single-listing">
-                                <!-- Range Slider Start -->
-                                <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow">
-                                    <div class="small-section-tittle2">
-                                        <h4>Filter Jobs</h4>
-                                    </div>
-                                    <div class="widgets_inner">
-                                        <div class="range_item">
-                                            <!-- <div id="slider-range"></div> -->
-                                            <input type="text" class="js-range-slider" value="" />
-                                            <div class="d-flex align-items-center">
-                                                <div class="price_text">
-                                                    <p>Price :</p>
-                                                </div>
-                                                <div class="price_value d-flex justify-content-center">
-                                                    <input type="text" class="js-input-from" id="amount" readonly />
-                                                    <span>to</span>
-                                                    <input type="text" class="js-input-to" id="amount" readonly />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </aside>
-                              <!-- Range Slider End -->
-                            </div>
-                        </div>
-                        <!-- Job Category Listing End -->
-                    </div>
-                    <!-- Right content -->
-                    <div class="col-xl-9 col-lg-9 col-md-8">
-                        <!-- Featured_job_start -->
-                        <section class="featured-job-area">
-                            <div class="container">
-                                <!-- Count of Job list Start -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="count-job mb-35">
-                                            <span>39, 782 Jobs found</span>
-                                            <!-- Select job items start -->
-                                            <div class="select-job-items">
-                                                <span>Sort by</span>
-                                                <select name="select">
-                                                    <option value="">None</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                    <option value="">job list</option>
-                                                </select>
-                                            </div>
-                                            <!--  Select job items End-->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Count of Job list End -->
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list2.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list3.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list4.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list1.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list3.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                                <!-- single-job-content -->
-                                <div class="single-job-items mb-30">
-                                    <div class="job-items">
-                                        <div class="company-img">
-                                            <a href="#"><img src="assets/img/icon/job-list4.png" alt=""></a>
-                                        </div>
-                                        <div class="job-tittle job-tittle2">
-                                            <a href="#">
-                                                <h4>Digital Marketer</h4>
-                                            </a>
-                                            <ul>
-                                                <li>Creative Agency</li>
-                                                <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                                <li>$3500 - $4000</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="items-link items-link2 f-right">
-                                        <a href="job_details.html">Full Time</a>
-                                        <span>7 hours ago</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Featured_job_end -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Job List Area End -->
-        <!--Pagination Start  -->
-        <div class="pagination-area pb-115 text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="single-wrap d-flex justify-content-center">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination justify-content-start">
-                                    <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a></li>
+                        <!-- Left content -->
+                        <div class="col-lg-3 blog_right_sidebar">
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="#">
+                                            <p class="d-flex">웹 개발</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">프론트엔드</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">백엔드</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">프로그래밍 언어</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">데이터베이스</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">알고리즘·자료구조</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">모바일 앱 개발</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">AI</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="d-flex">
+                                            <p class="d-flex">보안</p>
+                                        </a>
+                                    </li>
                                 </ul>
-                            </nav>
+                            </aside>
+                        </div>
+                        <!-- Right content -->
+                        <div class="col-lg-9">
+                            <section class="featured-job-area">
+                                <div class="container">
+                                    <!-- Count of Job list Start -->
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="count-job mb-35">
+                                                <span>39,782 course found</span>
+                                                <!-- Select job items start -->
+                                                <div class="select-job-items">
+                                                    <span>Sort by</span>
+                                                    <select name="select">
+                                                        <option value="">None</option>
+                                                        <option value="">좋아요</option>
+                                                        <option value="">난이도</option>
+                                                        <option value="">리뷰수</option>
+                                                        <option value="">가격순</option>
+                                                    </select>
+                                                </div>
+                                                <!--  Select job items End-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <%-- 강의 검색 입력 폼 --%>
+                                    <form action="#" class="search-box mb-5">
+                                        <div class="input-form item" >
+                                            <input type="text" placeholder="노트 제목 검색" tabindex="0">
+                                        </div>
+                                        <div class="search-form item">
+                                            <a href="#" tabindex="0">검색</a>
+                                        </div>	
+                                    </form>
+
+                                    <%-- 강의 리스트 출력 부분 --%>
+                                    <div class="row row-cols-4 mb-3">
+                                        <div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">공공데이터로 파이썬 분석 시작하기</a></div>
+                                                    <div id="teacher-name" class="card-text">박조은</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:65%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(14)</span>
+                                                    <div id="course-price" class="card-text">₩66,000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">코딩으로 학습하는 GoF 디자인패턴</a></div>
+                                                    <div id="teacher-name" class="card-text">백기선</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:99%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(203)</span>
+                                                    <div id="course-price" class="card-text">₩88,000</div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">만들고 비교하며 학습하는 리액트</a></div>
+                                                    <div id="teacher-name" class="card-text">김정환</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:90%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(155)</span>
+                                                    <div id="course-price" class="card-text">₩55,000</div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">MySQL 데이터베이스</a></div>
+                                                    <div id="teacher-name" class="card-text">코딩사전</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:77%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(17)</span>
+                                                    <div id="course-price" class="card-text">₩18,700</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">공공데이터로 파이썬 분석 시작하기</a></div>
+                                                    <div id="teacher-name" class="card-text">박조은</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:65%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(14)</span>
+                                                    <div id="course-price" class="card-text">₩66,000</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">코딩으로 학습하는 GoF 디자인패턴</a></div>
+                                                    <div id="teacher-name" class="card-text">백기선</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:99%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(203)</span>
+                                                    <div id="course-price" class="card-text">₩88,000</div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">만들고 비교하며 학습하는 리액트</a></div>
+                                                    <div id="teacher-name" class="card-text">김정환</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:90%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(155)</span>
+                                                    <div id="course-price" class="card-text">₩55,000</div>
+                                                </div>
+                                            </div>
+                                        </div><div class="col">
+                                            <div class="card shadow-sm mb-3">
+                                                <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
+
+                                                <div class="card-body">
+                                                    <div id="course-title" class="card-text"><a href="#">MySQL 데이터베이스</a></div>
+                                                    <div id="teacher-name" class="card-text">코딩사전</div>
+                                                    <div class="stars-outer">
+                                                        <div class="stars-inner" style="width:77%"></div>
+                                                    </div>
+                                                    <span class="number-rating">(17)</span>
+                                                    <div id="course-price" class="card-text">₩18,700</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <%-- 페이지 번호 --%>
+                            <div class="pagination-area pb-115 text-center mt-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="single-wrap d-flex justify-content-center">
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination justify-content-start">
+                                                        <li class="page-item active"><a class="page-link" href="#">01</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">02</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <%-- 페이지 번호 끝 --%>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!--Pagination End  -->
-        
-    </main>
+        </main>
     
 		<jsp:include page="./fix/footer.jsp" />
-	
-		<%------------ All JS Custom Plugins Link Here here -----------%>
-        <script src="<c:url value='/resources/js/vendor/modernizr-3.5.0.min.js'/>"></script>
-		<%-- Jquery, Popper, Bootstrap --%>
-		<script src="<c:url value='/resources/js/vendor/jquery-1.12.4.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/popper.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/bootstrap.min.js'/>"></script>
-	    <%-- Jquery Mobile Menu --%>
-        <script src="<c:url value='/resources/js/jquery.slicknav.min.js'/>"></script>
-
-		<%-- Jquery Slick , Owl-Carousel Plugins --%>
-        <script src="<c:url value='/resources/js/owl.carousel.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/slick.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/price_rangs.js'/>"></script>
-        
-		<%-- One Page, Animated-HeadLin --%>
-        <script src="<c:url value='/resources/js/wow.min.js'/>"></script>
-		<script src="<c:url value='/resources/js/animated.headline.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.magnific-popup.js'/>"></script>
-
-		<%-- Scrollup, nice-select, sticky --%>
-        <script src="<c:url value='/resources/js/jquery.scrollUp.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.nice-select.min.js'/>"></script>
-		<script src="<c:url value='/resources/js/jquery.sticky.js'/>"></script>
-        
-        <%-- contact js --%>
-        <script src="<c:url value='/resources/js/contact.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.form.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.validate.min.js'/>"></script>
-        <script src="<c:url value='/resources/js/mail-script.js'/>"></script>
-        <script src="<c:url value='/resources/js/jquery.ajaxchimp.min.js'/>"></script>
-        
-		<%-- Jquery Plugins, main Jquery --%>
-        <script src="<c:url value='/resources/js/plugins.js'/>"></script>
-        <script src="<c:url value='/resources/js/main.js'/>"></script>
-        
+        <!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

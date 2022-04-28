@@ -1,4 +1,4 @@
-package com.srping.ex.dao;
+package com.spring.ex.dao;
 
 import javax.inject.Inject;
 

@@ -1,24 +1,38 @@
 package com.spring.ex.controller;
 
+import javax.inject.Inject;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.spring.ex.dto.MemberDTO;
+import com.spring.ex.service.MemberService;
+
+
 @Controller
 public class LoginController {
 	
+	@Inject
+	MemberService service;
+	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
-	public String login() {
+	public String login(MemberDTO dto) throws Exception {
+		service.login(dto);
+		
 		return "/login/login";
 	}
 	
 	@RequestMapping(value="/signUp", method = RequestMethod.GET)
-	public String getSignUp() {
-		return "/login/signUp";
+	public void getSignUp() throws Exception {
+		
 	}	
 	
 	@RequestMapping(value="/signUp", method = RequestMethod.POST)
-	public String postSignUp() {
+	public String postSignUp(MemberDTO dto) throws Exception {
+		
+		service.signUp(dto);
+		
 		return "/login/signUp";
 	}	
 	

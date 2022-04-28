@@ -8,21 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CommunityController {
 	@RequestMapping("/chats")
 	public String chats() {
-		return "community_chats";
+		return "community/community_chats";
 	}
 	
 	@RequestMapping("/questions")
 	public String questions() {
-		return "community_questions";
+		return "community/community_questions";
 	}
 	
 	@RequestMapping("/reviews")
 	public String reviews() {
-		return "community_reviews";
+		return "community/community_reviews";
 	}
 	
 	@RequestMapping("/studies")
 	public String studies() {
-		return "community_studies";
+		return "community/community_studies";
 	}
 }

@@ -38,6 +38,11 @@
 			<div class="col-lg-7 mb-5 mb-lg-0">
 			<br>
 				<div class="blog_left_sidebar">
+					<ul class="nav nav-tabs">
+						<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;"> 전체</h6></a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;">모집중</h6></a></li>
+						<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;">모집완료</h6></a></li>
+					</ul><br>
 					<article class="blog_item">
 						<aside class="single_sidebar_widget search_widget">
 							<form action="#">

@@ -40,6 +40,12 @@
 			<br>
 				<div class="blog_left_sidebar">
 					<article class="blog_item">
+						<ul class="nav nav-tabs">
+							<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;"> 전체</h6></a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;">미해결</h6></a></li>
+							<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#"><h6 style="color: #5D5D5D;">해결됨</h6></a></li>
+						</ul>
+						<br>
 						<aside class="single_sidebar_widget search_widget">
 							<form action="#">
 								<div class="row">

@@ -27,14 +27,18 @@
    
     <%------------ header section  ------------%>
     <jsp:include page="../fix/header.jsp" />
+    
+	<div class="container-flex">
+    	<img src='<c:url value="/resources/img/community/community_reviews_banner.PNG" />' alt="" width="100%" height="100px">
+    </div><br>
    
     <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
             	<jsp:include page="community_left_sidebar.jsp" />
                
                 <div class="col-lg-7 mb-5 mb-lg-0">
+                	<br>
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                                <aside class="single_sidebar_widget search_widget">
@@ -61,8 +65,7 @@
 					              </li>
 					              <li class="nav-item">
 					                <a class="nav-link" data-toggle="tab" href="#asd"><h6 style="color:#5D5D5D;"> 별점순</h6></a>
-					              </li> 
-					              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+					              </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
 					              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 					              <li class="nav-item">
 					              </li>
@@ -160,12 +163,11 @@
                                  </li>
                              </ul>
                          </nav>
-                    </div>
+                    </div><br>
                 </div>
                 <jsp:include page="community_tag_sidebar.jsp" />
             </div>
         </div>
-    </section>
     
     <%------------ footer section  ------------%>
     <jsp:include page="../fix/footer.jsp" />

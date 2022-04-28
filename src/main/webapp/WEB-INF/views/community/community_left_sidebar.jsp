@@ -8,7 +8,7 @@
 	<div class="col-lg-2">
 	     <div class="blog_right_sidebar">
 	         <aside class="single_sidebar_widget post_category_widget">
-	             <h4 class="widget_title">Category</h4>
+	             <h6 class="widget_title">소통해요</h6>
 	             <ul class="list cat-list">
 	                 <li>
 	                     <a href="/community/chats" class="d-flex">
@@ -28,6 +28,22 @@
 	                 <li>
 	                     <a href="/community/studies" class="d-flex">
 	                         <p>스터디</p>
+	                     </a>
+	                 </li>
+	             </ul>
+	         </aside>
+	         
+      	     <aside class="single_sidebar_widget post_category_widget">
+	             <h4 class="widget_title">고객센터</h4>
+	             <ul class="list cat-list">
+	                 <li>
+	                     <a href="/community/chats" class="d-flex">
+	                         <p>1:1문의</p>
+	                     </a>
+	                 </li>
+	                 <li>
+	                     <a href="/community/questions" class="d-flex">
+	                         <p>자주찾는질문</p>
 	                     </a>
 	                 </li>
 	             </ul>

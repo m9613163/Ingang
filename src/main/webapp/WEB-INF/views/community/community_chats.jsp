@@ -27,14 +27,19 @@
    
     <%------------ header section  ------------%>
     <jsp:include page="../fix/header.jsp" />
+    
+    <div class="container-flex">
+    	<img src='<c:url value="/resources/img/community/community_chat_banner.PNG" />' alt="" width="100%" height="100px">
+    </div><br>
    
     <!--================Blog Area =================-->
-    <section class="blog_area section-padding">
-        <div class="container">
+    <div class="container">
+        <div class="container-flex">
             <div class="row">
 				<jsp:include page="community_left_sidebar.jsp" />
 				
-                <div class="col-lg-7 mb-5 mb-lg-0">
+                <div class="col-lg-7">
+                	<br>
                     <div class="blog_left_sidebar">
                         <article class="blog_item">
                                <aside class="single_sidebar_widget search_widget">
@@ -44,7 +49,7 @@
                                              <input type="text" class="form-control" placeholder='내용을 검색해보세요!' onblur="this.placeholder = 'Search Keyword'">
                                              <input type="text" class="form-control" placeholder='태그로 검색해보세요!'>
                                          </div>
-                                         <div class="col-lg-2" align="left">
+                                         <div class="col-lg-2" >
                                          
                                               <input type="button" class="genric-btn danger-border radius" value="검색">
                                          </div>
@@ -58,13 +63,12 @@
 						 	<div class="row">
 					            <ul class="nav nav-tabs">
 					              <li class="nav-item">
-					              	 <a class="nav-link active" data-toggle="tab" href="#qwe"><h6 style="color:#5D5D5D;"> 최신순</h6></a>
+					              	 <a class="nav-link active" data-toggle="tab" href="#qwe"><h6 style="color:#5D5D5D;">최신순</h6></a>
 					              </li>
 					              <li class="nav-item">
-					                <a class="nav-link" data-toggle="tab" href="#asd"><h6 style="color:#5D5D5D;"> 좋아요순</h6></a>
-					              </li> 
-					              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-					              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+					                <a class="nav-link" data-toggle="tab" href="#asd"><h6 style="color:#5D5D5D;">좋아요순</h6></a>
+					              </li>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+					              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
 					              <li class="nav-item">
 					              	 <button type="button" onclick="location.href='/'" class="genric-btn danger radius"><font size="1px;">글쓰기</font></button>
 					              </li>
@@ -139,36 +143,37 @@
 				              
 					            </div>
 					 		</div>
-						 </div>
+					 		<nav class="blog-pagination justify-content-center d-flex">
+	                         	<ul class="pagination">
+	                            	<li class="page-item">
+	                                     <a href="#" class="page-link" aria-label="Previous">
+	                                         <i class="ti-angle-left"></i>
+	                                     </a>
+	                                 </li>
+	                                 <li class="page-item">
+	                                     <a href="#" class="page-link">1</a>
+	                                 </li>
+	                                 <li class="page-item active">
+	                                     <a href="#" class="page-link">2</a>
+	                                 </li>
+	                                 <li class="page-item">
+	                                     <a href="#" class="page-link" aria-label="Next">
+	                                         <i class="ti-angle-right"></i>
+	                                     </a>
+	                                 </li>
+	                             </ul>
+	                         </nav>
+					 		
+						 </div><br>
 
 
-                         <nav class="blog-pagination justify-content-center d-flex">
-                         	<ul class="pagination">
-                            	<li class="page-item">
-                                     <a href="#" class="page-link" aria-label="Previous">
-                                         <i class="ti-angle-left"></i>
-                                     </a>
-                                 </li>
-                                 <li class="page-item">
-                                     <a href="#" class="page-link">1</a>
-                                 </li>
-                                 <li class="page-item active">
-                                     <a href="#" class="page-link">2</a>
-                                 </li>
-                                 <li class="page-item">
-                                     <a href="#" class="page-link" aria-label="Next">
-                                         <i class="ti-angle-right"></i>
-                                     </a>
-                                 </li>
-                             </ul>
-                         </nav>
                     </div>
                 </div>
                 
                 <jsp:include page="community_tag_sidebar.jsp" />
             </div>
         </div>
-    </section>
+    </div>
     
     <%------------ footer section  ------------%>
     <jsp:include page="../fix/footer.jsp" />

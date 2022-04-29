@@ -31,7 +31,7 @@
     <div class="container-flex" style="background-color: #000a12; width: 100%; height: 100px;">
     	<div class="container">
 	    	<div style="padding: 20px;">
-	    		<h4><font color="#FFFFFF" style="font-family: ">이야기를 나눠요</font></h4>
+	    		<h4 class="font-weight-bold"><font color="#FFFFFF" style="font-family:; ">이야기를 나눠요</font></h4>
 	    		<font color="#FFFFFF">500만의 커뮤니티!! 함께 토론해봐요</font> 
 	    	</div>
     	</div>

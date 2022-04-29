@@ -63,7 +63,7 @@
                                 <!-- Header-btn -->
                                 <div class="header-btn d-none f-right d-lg-block">
                                     <a href="/signUp" class="btn head-btn1">가입하기</a>
-                                    <a href="/login" class="btn head-btn2">로그인</a>
+                                    <a href="/loginPageView" class="btn head-btn2">로그인</a>
                                 </div>
                             </div>
                         </div>

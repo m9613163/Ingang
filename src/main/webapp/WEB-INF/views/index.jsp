@@ -47,13 +47,6 @@
      	<%------------ main section  ------------%>
      	<main>
      	
-     	<ul>
-	        <li><a class="home" href="#">홈</a></li>
-	        <li><a href="#">새소식</a></li>
-	        <li><a href="#">상품</a></li>
-	        <li><a href="#">회사</a></li>
-    	</ul>
-     	
         <!-- slider Area Start-->
 		<!-- Mobile Menu -->
 		<div class="slider-active">
@@ -93,91 +86,94 @@
 			</div>
 		</div>
 		<!-- slider Area End-->
-		
-	
+		<br/><br/>
+
 		<!-- 좌측 사이드 영역 start -->
 		<div class="left-box">
-			<center><h3>실시간 강의 평가</h3></center>
 			<!-- Testimonial Start -->
-        <div class="testimonial-area testimonial-padding">
-            <div class="container">
-                <!-- Testimonial contents -->
-                <div class="row d-flex justify-content-center">
-                    <div class="col-xl-8 col-lg-8 col-md-10">
-                        <div class="h1-testimonial-active dot-style">
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <!-- founder -->
-                                    <div class="testimonial-founder  ">
-                                        <div class="founder-img mb-30">
-                                            <img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt="">
-                                            <span>회원 아이디</span>
-                                            <p>강의이름</p>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-top-cap">
-                                        <p>“강의평”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <!-- founder -->
-                                    <div class="testimonial-founder  ">
-                                        <div class="founder-img mb-30">
-                                            <img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt="">
-                                            <span>회원 아이디</span>
-                                            <p>강의이름</p>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-top-cap">
-                                        <p>“강의평”</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Testimonial -->
-                            <div class="single-testimonial text-center">
-                                <!-- Testimonial Content -->
-                                <div class="testimonial-caption ">
-                                    <!-- founder -->
-                                    <div class="testimonial-founder  ">
-                                        <div class="founder-img mb-30">
-                                            <img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt="">
-                                            <span>회원 아이디</span>
-                                            <p>강의이름</p>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-top-cap">
-                                        <p>“강의평”</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
-			<center><h3>핫 트랜드 검색어</h3></center>
-			<ul>
-				<li>1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				<li>6</li>
-				<li>7</li>
-				<li>8</li>
-				<li>9</li>
-				<li>10</li>
-			</ul>
+			<div class="testimonial-area testimonial-padding">
+				<div class="container">
+				<center><h3>실시간 강의 평가</h3></center>
+					<!-- Testimonial contents -->
+					<div class="row d-flex justify-content-center">
+						<div class="col-xl-8 col-lg-8 col-md-10">
+							<div class="h1-testimonial-active dot-style">
+								<!-- Single Testimonial -->
+								<div class="single-testimonial text-center">
+									<!-- Testimonial Content -->
+									<div class="testimonial-caption ">
+										<!-- founder -->
+										<div class="testimonial-founder  ">
+											<div class="founder-img mb-30">
+												<img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt=""> <span>회원 아이디</span>
+												<p>강의이름</p>
+											</div>
+										</div>
+										<div class="testimonial-top-cap">
+											<p>“강의평”</p>
+										</div>
+									</div>
+								</div>
+								<!-- Single Testimonial -->
+								<div class="single-testimonial text-center">
+									<!-- Testimonial Content -->
+									<div class="testimonial-caption ">
+										<!-- founder -->
+										<div class="testimonial-founder  ">
+											<div class="founder-img mb-30">
+												<img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt=""> <span>회원 아이디</span>
+												<p>강의이름</p>
+											</div>
+										</div>
+										<div class="testimonial-top-cap">
+											<p>“강의평”</p>
+										</div>
+									</div>
+								</div>
+								<!-- Single Testimonial -->
+								<div class="single-testimonial text-center">
+									<!-- Testimonial Content -->
+									<div class="testimonial-caption ">
+										<!-- founder -->
+										<div class="testimonial-founder  ">
+											<div class="founder-img mb-30">
+												<img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt=""> <span>회원 아이디</span>
+												<p>강의이름</p>
+											</div>
+										</div>
+										<div class="testimonial-top-cap">
+											<p>“강의평”</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Testimonial End -->
+			<center>
+				<h3>핫 트랜드 검색어</h3>
+			</center>
+			<div class="container">
+				<ul>
+					<li>1. ㅂㅈㄿ</li>
+					<li>2. ㅂㅈㄷ</li>
+					<li>3. ㅁㄴㅇ</li>
+					<li>4. ㅁㄴㅇ</li>
+					<li>5. ㅇㅁㄴ</li>
+					<li>6. ㅇㅁㄴ</li>
+					<li>7. ㅁㄴㄴㅁㅇ</li>
+					<li>8. 음하핫</li>
+					<li>9. 크하하핫</li>
+					<li>10. 으하하핫</li>
+				</ul>
+			</div>
+
 		</div>
 		<!-- 좌측 사이드 영역 end -->
-		
+
 		<!-- 이 주의 강의 Start -->
         <div class="our-services section-pad-t30">
             <div class="container">

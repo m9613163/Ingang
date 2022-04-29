@@ -1,7 +1,10 @@
 package com.spring.ex.dao;
 
+import org.springframework.stereotype.Repository;
+
 import com.spring.ex.dto.MemberDTO;
 
+@Repository
 public interface MemberDAO {
 	
 	//회원 가입

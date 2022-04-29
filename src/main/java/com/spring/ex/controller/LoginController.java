@@ -13,13 +13,20 @@ import com.spring.ex.service.MemberService;
 @Controller
 public class LoginController {
 	
-	//@Inject
-	//MemberService service;
+	@Inject
+	MemberService service;
 	
-	@RequestMapping(value="/login", method = RequestMethod.GET)
-	public String login(MemberDTO dto) throws Exception {
-		//service.login(dto);
+	@RequestMapping(value="/loginPageView", method = RequestMethod.GET)
+	public String getLogin(MemberDTO dto) throws Exception {
 		
+		return "/login/login";
+	}
+	
+	@RequestMapping(value = "/loginPageView", method = RequestMethod.POST)
+	public String postLogin(MemberDTO dto) throws Exception {
+
+		service.login(dto);
+
 		return "/login/login";
 	}
 	
@@ -31,7 +38,7 @@ public class LoginController {
 	@RequestMapping(value="/signUp", method = RequestMethod.POST)
 	public String postSignUp(MemberDTO dto) throws Exception {
 		
-		//service.signUp(dto);
+		service.signUp(dto);
 		
 		return "/login/signUp";
 	}	

@@ -126,10 +126,10 @@
 
    <body>
     	<%-- Preloader --%>
-	    <jsp:include page="./fix/preloader.jsp" />
+	    <jsp:include page="../fix/preloader.jsp" />
 	   
 	    <%------------ header section  ------------%>
-	    <jsp:include page="./fix/header.jsp" />
+	    <jsp:include page="../fix/header.jsp" />
     
         <!-- 메인 -->
         <main>
@@ -231,7 +231,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">공공데이터로 파이썬 분석 시작하기</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">공공데이터로 파이썬 분석 시작하기</a></div>
                                                     <div id="teacher-name" class="card-text">박조은</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:65%"></div>
@@ -246,7 +246,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">코딩으로 학습하는 GoF 디자인패턴</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">코딩으로 학습하는 GoF 디자인패턴</a></div>
                                                     <div id="teacher-name" class="card-text">백기선</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:99%"></div>
@@ -260,7 +260,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">만들고 비교하며 학습하는 리액트</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">만들고 비교하며 학습하는 리액트</a></div>
                                                     <div id="teacher-name" class="card-text">김정환</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:90%"></div>
@@ -274,7 +274,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">MySQL 데이터베이스</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">MySQL 데이터베이스</a></div>
                                                     <div id="teacher-name" class="card-text">코딩사전</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:77%"></div>
@@ -289,7 +289,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">공공데이터로 파이썬 분석 시작하기</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">공공데이터로 파이썬 분석 시작하기</a></div>
                                                     <div id="teacher-name" class="card-text">박조은</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:65%"></div>
@@ -304,7 +304,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">코딩으로 학습하는 GoF 디자인패턴</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">코딩으로 학습하는 GoF 디자인패턴</a></div>
                                                     <div id="teacher-name" class="card-text">백기선</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:99%"></div>
@@ -318,7 +318,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">만들고 비교하며 학습하는 리액트</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">만들고 비교하며 학습하는 리액트</a></div>
                                                     <div id="teacher-name" class="card-text">김정환</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:90%"></div>
@@ -332,7 +332,7 @@
                                                 <svg class="bd-placeholder-img card-img-top" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></svg>
 
                                                 <div class="card-body">
-                                                    <div id="course-title" class="card-text"><a href="#">MySQL 데이터베이스</a></div>
+                                                    <div id="course-title" class="card-text"><a href="/courses_detail">MySQL 데이터베이스</a></div>
                                                     <div id="teacher-name" class="card-text">코딩사전</div>
                                                     <div class="stars-outer">
                                                         <div class="stars-inner" style="width:77%"></div>
@@ -372,7 +372,7 @@
             </div>
         </main>
     
-		<jsp:include page="./fix/footer.jsp" />
+		<jsp:include page="../fix/footer.jsp" />
         <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>

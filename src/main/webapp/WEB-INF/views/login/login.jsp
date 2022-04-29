@@ -36,8 +36,6 @@
 	<%------------ header section  ------------%>
 	<jsp:include page="../fix/header.jsp" />
 	
-	
-    
     <!-- Login Section Begin -->
     <section class="login spad">
         <div class="container">

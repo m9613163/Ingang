@@ -80,7 +80,7 @@
 								</span>
                             </div>
                             <div class="input__item">
-                                <input type="text" class="form-control" name="m_phone" placeholder="전화번호를 입력해 주세요"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                                <input type="text" class="form-control" name="m_phone" placeholder="전화번호를 입력해 주세요" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                                 <span class="material-symbols-outlined">
 									call
 								</span>

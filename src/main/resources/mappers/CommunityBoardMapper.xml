@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.ex.CommunityBoardMapper">
+
+	<!-- 게시판 최신순 출력 -->
+	<select id="getCommunityBoardPage" resultType="CommunityBoardDTO">
+		SELECT cb.cb_no, m.m_id, cb.title, cb.content, cb.hit, cb.reg_date, cb.flag, cb.classify, 
+				(SELECT COUNT(*) FROM community_board_reply cbr WHERE cb.cb_no=cbr.cb_no) "댓글수",
+				(SELECT COUNT(*) FROM community_board_good cbg WHERE cb.cb_no=cbg.cb_no) "좋아요수"
+		FROM community_board cb, member m
+		WHERE m.m_no = cb.m_no
+		group BY cb.cb_no, cb.hit, cb.reg_date
+		HAVING flag = 1 AND classify = 1 
+		order by cb.reg_date DESC LIMIT #{Page}, #{PageSize};
+	</select>
+	
+	<!-- 게시판 총 갯수 -->
+	<select id="getCommunityBoardTotalCount" resultType="int">
+		SELECT COUNT(*) FROM community_board
+	</select>
+	
+</mapper>

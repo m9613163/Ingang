@@ -24,7 +24,7 @@ public class CommunityController {
 	
 	@RequestMapping(value = "/chats", method = RequestMethod.GET)
 	public String chats(Model model, HttpServletRequest request) throws Exception{
-		pagingService = new PagingService(request, cbService.getCommunityBoardTotalCount(), 12);
+		pagingService = new PagingService(request, cbService.getCommunityBoardTotalCount(), 10);
 		List<CommunityBoardDTO> communityBoardList = cbService.getCommunityBoardPage(pagingService.getMap());
 		
 		model.addAttribute("cbList", communityBoardList);

@@ -4,10 +4,10 @@
 <mapper namespace="com.spring.ex.CommunityBoardMapper">
 
 	<!-- 게시판 최신순 출력 -->
-	<select id="getCommunityBoardPage" resultType="CommunityBoardDTO">
-		SELECT cb.cb_no, m.m_id, cb.title, cb.content, cb.hit, cb.reg_date, cb.flag, cb.classify, 
-				(SELECT COUNT(*) FROM community_board_reply cbr WHERE cb.cb_no=cbr.cb_no) "댓글수",
-				(SELECT COUNT(*) FROM community_board_good cbg WHERE cb.cb_no=cbg.cb_no) "좋아요수"
+	<select id="getCommunityBoardPage" resultType="hashMap">
+		SELECT cb.`cb_no`, m.`m_id`, cb.`title`, cb.`content`, cb.`hit`, cb.`reg_date`, cb.`flag`, cb.`classify`, 
+				(SELECT COUNT(*) FROM community_board_reply cbr WHERE cb.cb_no=cbr.cb_no) `reply`,
+				(SELECT COUNT(*) FROM community_board_good cbg WHERE cb.cb_no=cbg.cb_no) `good`
 		FROM community_board cb, member m
 		WHERE m.m_no = cb.m_no
 		group BY cb.cb_no, cb.hit, cb.reg_date

@@ -77,39 +77,25 @@
 								</li>
 							</ul>
 
+						
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="qwe">
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>제대로 이해한것인지 궁금합니다.</h2>
-											</a>
-											<p>5분대부터 헷갈리고 있습니다. 59번째 줄에 killKnight(knight); 가 남아있어서
-												그런가? 싶은 생각이 듭니다. 1. 59번째 줄 이후로 knight.hp값이 0...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
-
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>이미지 출력 에러가 발생합니다</h2>
-											</a>
-											<p>이미지 출력하는 부분에서 에러가 발생합니다. 에러 내용은 이러합니다. 파일 경로에 이미지가
-												uuid형식으로 저장되는 것은 확인 하였습니다. 어떻게 해결해야...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
+									<c:forEach var="cbList" items="${cbList}">
+										<article class="blog_item">
+											<div class="blog_details">
+												<a class="d-inline-block" href="single-blog.html">
+													<h2><c:url value="${cbList.title}"/></h2>
+												</a>
+												<p><c:url value="${cbList.content}"/></p>
+												<ul class="blog-info-link">
+													<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
+													<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
+													<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
+													<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
+												</ul>
+											</div>
+										</article>
+									</c:forEach>
 								</div>
 								<div class="tab-pane fade" id="asd">
 									<article class="blog_item">

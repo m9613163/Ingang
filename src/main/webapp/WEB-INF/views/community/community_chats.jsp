@@ -28,8 +28,13 @@
     <%------------ header section  ------------%>
     <jsp:include page="../fix/header.jsp" />
     
-    <div class="container-flex">
-    	<img src='<c:url value="/resources/img/community/community_chat_banner.PNG" />' alt="" width="100%" height="100px">
+    <div class="container-flex" style="background-color: #000a12; width: 100%; height: 100px;">
+    	<div class="container">
+	    	<div style="padding: 20px;">
+	    		<h4 class="font-weight-bold"><font color="#FFFFFF" style="font-family:; ">이야기를 나눠요</font></h4>
+	    		<font color="#FFFFFF">500만의 커뮤니티!! 함께 토론해봐요</font> 
+	    	</div>
+    	</div>
     </div><br>
    
     <!--================Blog Area =================-->
@@ -72,72 +77,46 @@
 								</li>
 							</ul>
 
+						
 							<div class="tab-content">
 								<div class="tab-pane fade show active" id="qwe">
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>제대로 이해한것인지 궁금합니다.</h2>
-											</a>
-											<p>5분대부터 헷갈리고 있습니다. 59번째 줄에 killKnight(knight); 가 남아있어서
-												그런가? 싶은 생각이 듭니다. 1. 59번째 줄 이후로 knight.hp값이 0...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
-
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>이미지 출력 에러가 발생합니다</h2>
-											</a>
-											<p>이미지 출력하는 부분에서 에러가 발생합니다. 에러 내용은 이러합니다. 파일 경로에 이미지가
-												uuid형식으로 저장되는 것은 확인 하였습니다. 어떻게 해결해야...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
+									<c:forEach var="cbList" items="${cbList}">
+										<article class="blog_item">
+											<div class="blog_details">
+												<a class="d-inline-block" href="single-blog.html">
+													<h2><c:url value="${cbList.title}"/></h2>
+												</a>
+												<p><c:url value="${cbList.content}"/></p>
+												<ul class="blog-info-link">
+													<li><a href="#"><i class="fa fa-user"></i> <c:url value="${cbList.m_id}"/></a></li>
+													<li><a href="#"><i class="fa fa-comments"></i> <c:url value="${cbList.reply}"/> </a></li>
+													<li><a href="#"><i class="fa fa-heart"></i> <c:url value="${cbList.good}"/></a></li>
+													<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484"><c:url value="${cbList.reg_date}"/></font></li>
+												</ul>
+											</div>
+										</article>
+									</c:forEach>
 								</div>
 								<div class="tab-pane fade" id="asd">
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>터미널에 명령어</h2>
-											</a>
-											<p>5분대부터 헷갈리고 있습니다. 59번째 줄에 killKnight(knight); 가 남아있어서
-												그런가? 싶은 생각이 듭니다. 1. 59번째 줄 이후로 knight.hp값이 0...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
-
-									<article class="blog_item">
-										<div class="blog_details">
-											<a class="d-inline-block" href="single-blog.html">
-												<h2>spring boot 2.5 버전 이상일 경우 오류</h2>
-											</a>
-											<p>이미지 출력하는 부분에서 에러가 발생합니다. 에러 내용은 이러합니다. 파일 경로에 이미지가
-												uuid형식으로 저장되는 것은 확인 하였습니다. 어떻게 해결해야...</p>
-											<ul class="blog-info-link">
-												<li><a href="#"><i class="fa fa-user"></i> choum97</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i> 12 </a></li>
-												<li><a href="#"><i class="fa fa-heart"></i> 3</a></li>
-												<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484">2022-04-12 09:30</font></li>
-											</ul>
-										</div>
-									</article>
+									<div class="tab-pane fade show active" id="qwe">
+										<c:forEach var="cbList" items="${cbList}">
+											<article class="blog_item">
+												<div class="blog_details">
+													<a class="d-inline-block" href="single-blog.html">
+														<h2><c:url value="${cbList.title}"/></h2>
+													</a>
+													<p><c:url value="${cbList.content}"/></p>
+													<ul class="blog-info-link">
+														<li><a href="#"><i class="fa fa-user"></i> <c:url value="${cbList.m_id}"/></a></li>
+														<li><a href="#"><i class="fa fa-comments"></i> <c:url value="${cbList.reply}"/> </a></li>
+														<li><a href="#"><i class="fa fa-heart"></i> <c:url value="${cbList.good}"/></a></li>
+														<li><i class="fa fa-clock-o"> </i><font size="2" color="#848484"><c:url value="${cbList.reg_date}"/></font></li>
+													</ul>
+												</div>
+											</article>
+										</c:forEach>
+									</div>
+								
 								</div>
 
 							</div>
@@ -145,22 +124,37 @@
 					</div>
 
 
-				<nav class="blog-pagination justify-content-center d-flex">
-					<ul class="pagination">
-						<li class="page-item">
-							<a href="#" class="page-link" aria-label="Previous"> <i class="ti-angle-left"></i> </a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link">1</a>
-						</li>
-						<li class="page-item active">
-							<a href="#" class="page-link">2</a>
-						</li>
-						<li class="page-item">
-							<a href="#" class="page-link" aria-label="Next"> <i class="ti-angle-right"></i></a>
-						</li>
-					</ul>
-				</nav>
+					<nav class="blog-pagination justify-content-center d-flex">
+						<ul class="pagination">
+							<!-- 첫 페이지면 Disabled 아니라면 Enabled -->
+							<c:choose>
+								<c:when test="${Paging.pageNo eq Paging.firstPageNo }">
+								</c:when>
+								<c:otherwise>
+									<li class="page-item"><a href="chats?page=${Paging.prevPageNo}" class="page-link" aria-label="Previous"> <i class="ti-angle-left"></i> </a></li>
+								</c:otherwise>
+							</c:choose>
+							<!-- 페이지 갯수만큼 버튼 생성 -->
+							<c:forEach var="i" begin="${Paging.startPageNo }" end="${Paging.endPageNo }" step="1">
+								<c:choose>
+									<c:when test="${i eq Paging.pageNo }">
+										<li class="page-item  active"> <a href="chats?page=${i}" class="page-link"><c:out value="${i }"/></a> </li>
+									</c:when>
+									<c:otherwise>
+										<li class="page-item"> <a href="chats?page=${i}" class="page-link"><c:out value="${i }"/></a> </li>
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+							<!-- 마지막 페이지면 Disabled 아니라면 Enabled -->
+							<c:choose>
+								<c:when test="${Paging.pageNo eq Paging.finalPageNo }">
+								</c:when>
+								<c:otherwise>
+									<li class="page-item"><a href="chats?page=${Paging.nextPageNo}" class="page-link" aria-label="Next"> <i class="ti-angle-right"></i></a></li>
+								</c:otherwise>
+							</c:choose>
+						</ul>
+					</nav>
 				</div><br>
 			</div>
 			<jsp:include page="community_tag_sidebar.jsp" />

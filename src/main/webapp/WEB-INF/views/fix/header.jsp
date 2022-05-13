@@ -16,8 +16,8 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-2">
                             <!-- Logo -->
-                            <div class="logo">
-                                <a href="<c:url value='/'/>"><img src="<c:url value='/resources/img/logo/logo.png'/>" alt=""></a>
+                            <div class="logo" align="center">
+                                <a href="<c:url value='/'/>"><img src="<c:url value='/resources/img/logo/logo7.png'/>" width="150px;" height="100px;" alt=""></a>
                             </div>  
                         </div>
                         <div class="col-lg-9 col-md-9">

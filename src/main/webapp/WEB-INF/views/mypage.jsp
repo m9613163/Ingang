@@ -44,24 +44,27 @@
 						<nav class="navbar bg-light navbar-light">
 							<div class="navbar-nav w-100">
 								<div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle"
-										data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>회원정보</a>
+									<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+										<i class="fa fa-laptop me-2"></i>회원정보
+									</a>
 									<div class="dropdown-menu bg-transparent border-0">
-										<a href="/mypage" class="dropdown-item">정보수정</a> <a
-											href="/mypage" class="dropdown-item">회원탈퇴</a>
+										<a href="/mypage" class="dropdown-item">정보수정</a> 
+										<a href="/mypage" class="dropdown-item">회원탈퇴</a>
 									</div>
 								</div>
 								<div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle"
-										data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>구매내역</a>
+									<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+										<i class="far fa-file-alt me-2"></i>구매내역
+									</a>
 									<div class="dropdown-menu bg-transparent border-0">
-										<a href="/mypage" class="dropdown-item">강의내역</a> <a
-											href="/mypage" class="dropdown-item">노트내역</a>
+										<a href="/mypage" class="dropdown-item">강의내역</a> 
+										<a href="/mypage" class="dropdown-item">노트내역</a>
 									</div>
 								</div>
 								<div class="nav-item dropdown">
-									<a href="#" class="nav-link dropdown-toggle"
-										data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>My</a>
+									<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+										<i class="far fa-file-alt me-2"></i>My
+									</a>
 									<div class="dropdown-menu bg-transparent border-0">
 										<a href="/mypage" class="dropdown-item">내 강의</a> <a
 											href="/mypage" class="dropdown-item">내 노트</a> <a
@@ -81,15 +84,12 @@
 								<!-- founder -->
 								<div class="testimonial-founder  ">
 									<div class="founder-img mb-30">
-										<img
-											src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>"
-											alt=""> <span>회원 아이디</span>
-										<p>강의이름</p>
-										<button type="button" class="btn head-btn2" name="btn_modify"
-											onclick="location.href=''">정보수정</button>
+										<img src="<c:url value='/resources/img/testmonial/testimonial-founder.png'/>" alt="">
+										<span>${member.m_id}</span>
+										<p>${member.m_name}</p>
+										<button type="button" class="btn head-btn2" name="btn_modify" onclick="location.href=''">정보수정</button>
 										&nbsp;&nbsp;
-										<button type="button" class="btn head-btn1" name="btn_delete"
-											onclick="location.href=''">회원탈퇴</button>
+										<button type="button" class="btn head-btn1" name="btn_delete" onclick="location.href=''">회원탈퇴</button>
 									</div>
 								</div>
 							</div>

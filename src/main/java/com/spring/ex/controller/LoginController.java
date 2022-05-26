@@ -54,20 +54,20 @@ public class LoginController {
 		
 		service.signUp(dto);
 		
-		return "/login/signUp";
+		return "/";
 	}	
 	
 	// 아이디 중복 체크
 	@ResponseBody
-	@RequestMapping(value = "/memberIdCheck", method = RequestMethod.POST)
+	@RequestMapping(value = "/idCheck", method = RequestMethod.POST)
 	public int postMemberIdCheck(HttpServletRequest req) throws Exception {
 
 		String m_id = req.getParameter("m_id");
-		MemberDTO memberIdCheck = service.memberIdCheck(m_id);
+		MemberDTO idCheck = service.idCheck(m_id);
 
 		int result = 0;
 
-		if (memberIdCheck != null) {
+		if (idCheck != null) {
 			result = 1;
 		}
 
